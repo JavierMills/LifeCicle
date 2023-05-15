@@ -1,0 +1,20 @@
+<h4>Listado de Personajes</h4>
+        <ul class="list-group">
+            <li *ngFor="let character of characterList; 
+            let i = index
+            let isFirst = first
+            let isLast = last
+            let isPar = even
+            " class="list-group-item d-flex justify-content-between align-items-center" 
+            [ngClass]="{'list-group-item-warning': isLast, 'list-group-item-success': isFirst}">
+               <div>
+                <span class="text-warning"><strong>{{ i  + 1 }}</strong>-</span>
+                <span>{{character.name}} - </span>
+                 <strong>Power: </strong>
+                <span>{{character.power}} </span>
+               </div>
+               <div >
+                <button (click)="eliminarRegistro( character.id )" class="btn btn-outline-danger">X</button>
+               </div>
+            </li>
+        </ul>

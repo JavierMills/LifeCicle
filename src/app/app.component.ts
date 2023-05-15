@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  ocultar: boolean = true;
-  title = 'lifecycle';
-
-  ocultarPagina(){
-    this.ocultar = !this.ocultar
-  }
 }
